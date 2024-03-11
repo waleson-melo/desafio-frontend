@@ -26,7 +26,6 @@ function Header({ searchBar = true }: IHeaderProps) {
       {searchBar && <SearchBar className="w-full px-24" />}
       <Popover>
         <PopoverTrigger asChild>
-          {/* <Button variant="outline">Open popover</Button> */}
           <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>
@@ -40,7 +39,16 @@ function Header({ searchBar = true }: IHeaderProps) {
           <p className="text-lg font-bold">
             Olá, {sessionStorage.getItem("nome")}
           </p>
-          <Button onClick={logout} variant={"outline"} className="w-full">
+          <Link to="/minhas-compras" className="w-full my-2">
+            <Button variant={"outline"} className="w-full">
+              Minhas compras
+            </Button>
+          </Link>
+          <Button
+            onClick={logout}
+            variant={"outline"}
+            className="w-full text-red-500 hover:text-red-700"
+          >
             Logout
           </Button>
         </PopoverContent>

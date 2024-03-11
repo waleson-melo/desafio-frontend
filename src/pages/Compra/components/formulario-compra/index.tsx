@@ -76,6 +76,7 @@ function FormularioCompra({ produto }: IFormularioCompraProps) {
             src={produto.imagem}
             alt={produto.nome}
             className="size-[500px]"
+            style={{ objectFit: "contain" }}
           />
         </div>
         <div className="flex flex-col self-center justify-between h-1/2 w-full sm:w-full md:w-1/2 xl:w-1/2 p-6 bg-gray-50">

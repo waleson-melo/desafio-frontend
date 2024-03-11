@@ -16,13 +16,14 @@ function CardProduto({ produto }: ICardProdutoProps) {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <div className="relative">
+      <div className="relative flex justify-center">
         <img
           src={produto.imagem}
           alt={produto.id}
-          className={`p-6 transition-transform duration-300 transform ${
+          className={`size-48 p-6 transition-transform duration-300 transform ${
             hover ? "scale-110" : ""
           }`}
+          style={{ objectFit: "contain" }}
         />
         <div
           className={`absolute rounded-md top-0 left-0 w-full h-full flex items-end justify-center bg-gray-300 bg-opacity-50 text-white text-center opacity-0 ${
