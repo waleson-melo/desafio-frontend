@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { Button } from "../ui/button"
 import SearchBar from "../search-bar"
 
@@ -20,9 +20,10 @@ function Header({ searchBar = true }: IHeaderProps) {
 
   return (
     <div className="bg-gray-100 flex justify-between items-center px-5">
-      <img src={Logo} alt="logo" className="size-20" />
+      <Link to={"/"}>
+        <img src={Logo} alt="logo" className="size-20" />
+      </Link>
       {searchBar && <SearchBar className="w-full px-24" />}
-      {/* <Button onClick={logout}>Logout</Button> */}
       <Popover>
         <PopoverTrigger asChild>
           {/* <Button variant="outline">Open popover</Button> */}
