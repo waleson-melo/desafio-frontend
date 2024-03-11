@@ -1,8 +1,6 @@
-import { Cliente } from "./cliente"
-
 export class Venda {
   public id!: string
-  public cliente!: Cliente
+  public cliente!: string
   public produto!: string
   public quantidade!: number
   public valor!: number
